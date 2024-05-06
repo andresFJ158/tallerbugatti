@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import  '../../node_modules/animate.css/animate.css';
+---
+<Layout title="Taller bugatti" descripcion='Nuestro taller está dedicado a proporcionar servicios de alta calidad con un enfoque en la satisfacción del cliente y la excelencia técnica.'>
+	<main>	
+		<section class="banner flex justify-center items-center gap-16 bg-grid">
+			<div class="w-2/5 text-center">
+				<h1 class="my-3 animate__animated animate__rubberBand"><span class="text-gradient">Taller</span> Profesional</h1>
+				<p class="my-3">
+					<i>Tu destino confiable para todas las necesidades mecánicas de tu vehículo.</i> <br> Nuestro taller está dedicado a proporcionar servicios de alta calidad con un enfoque en la satisfacción del cliente y la excelencia técnica.
+				</p>
+				<button id="boton-reserva" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Reserva tu espacio</button>
+			</div>
+			<div class="w-2/5">
+				<img src="../src/img/banner.png" alt="imagen" class="w-full h-auto banner-img">
+			</div>
+		</section>
+		<section id="servicios" class="servicios my-6 justify-center items-center">
+			<h2>Nuestros Servicios</h2>
+			<div class="flex gap-16 my-6 p-3">
+				<Card title='Chaperio y pintura' src='src/img/spray-gun.png'>
+				</Card>
+				<Card title='Mecanica general' src='src/img/car-service.png'>
+				</Card>
+				<Card title='Pintado a horno' src='src/img/car-painting.png'>
+				</Card>
+			</div>
+		</section>
+		<section id="reserva">
+			<h2 class="my-3">Reserva tú espacio</h2>
+			<div class="flex bg-white p-10 justify-center rounded">
+				<form class="w-full max-w-lg">
+					<div class="flex flex-wrap -mx-3 mb-6">
+						<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+							<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+								Nombre Completo
+							</label>
+							<input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nombre" type="text" placeholder="Nombre">					  </div>
+						<div class="w-full md:w-1/2 px-3">
+							<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+								Marca
+							</label>
+							<input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="marca" type="text" placeholder="Toyota">
+						</div>
+					</div>
+					<div class="flex flex-wrap -mx-3 mb-6">
+						<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+							<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+								Modelo
+							</label>
+							<input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="modelo" type="text" placeholder="Rav4">
+						</div>
+						<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+							<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+								Servicio
+							</label>
+							<select class="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="servicio">
+								<option value="Cambio de aceite de corona o diferenciales">Cambio de aceite de corona o diferenciales</option>
+								<option value="Revisión de sistemas electrónicos con scanner">Revisión de sistemas electrónicos con scanner</option>
+								<option value="Afinado de motor">Afinado de motor</option>
+								<option value="Reparación de frenos y suspensión">Reparación de frenos y suspensión</option>
+								<option value="Trabajo de aires acondicionados en general">Trabajo de aires acondicionados en general</option>
+								<option value="Trabajos eléctricos en general">Trabajos eléctricos en general</option>
+								<option value="Detección de todo tipo de ruidos mecánicos y estéticos">Detección de todo tipo de ruidos mecánicos y estéticos</option>
+								<option value="Mantenimiento y reparación de techos solares y descapotables">Mantenimiento y reparación de techos solares y descapotables</option>
+								<option value="Mantenimientos preventivos y correctivos">Mantenimientos preventivos y correctivos</option>
+								<option value="Chaperío y pintura en general">Chaperío y pintura en general</option>
+								<option value="Pulidos y abrillantados completos">Pulidos y abrillantados completos</option>
+								<option value="Pintado en horno">Pintado en horno</option>
+							</select>
+						</div>
+					</div>
+					<button type="button" id="boton" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Enviar</button>
+				</form>
+			</div>
+		</section>	
+			<section id="contacto">
+				<h2 class="my-3">Encuentranos</h2>
+				<div class="flex justify-center">
+					<a href="https://www.facebook.com/profile.php?id=61558472186477">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/tallerbugatti/">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+							<path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+							<path d="M16.5 7.5l0 .01" />
+						</svg>
+					</a>
+				</div>
+				<div class="flex m-3 justify-center" id="map-container">
+					<iframe
+						width="600"
+						height="450"
+						style="border:0"
+						loading="lazy"
+						allowfullscreen
+						src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB_ByrKr-Q_eQ3IXE4Ea42OghW6-ybr59c&q=-17.7448449,-63.1746007">
+					</iframe>
+				</div>
+			</section>
+			<a href="https://api.whatsapp.com/send?phone=59160854979" class="float" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" class="float icon icon-tabler icon-tabler-brand-whatsapp" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+					<path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+				</svg>
+			</a>
+			<footer class="text-center">
+				<p>Desarrollado por <a href="https://desarrolloweb24siete.com" >Desarrollo Web 24 Siete</a> </p>
+			</footer>		
+		</section>
+	</main>
+	<script src="../pages/script.js"></script>
+</Layout>
+
