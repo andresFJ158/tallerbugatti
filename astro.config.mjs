@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 
 export default defineConfig ({ 
-  integrations: [tailwind()],
+  integrations:  [image({serviceEntryPoint: '@astrojs/image/sharp'}),sitemap(), tailwind()],
   output: 'server',
   adapter: vercel(),
 });
